@@ -1,0 +1,132 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/* line 1, ../sass/inc/_base.scss */
+body {
+  padding: 0px;
+  margin: 0px;
+  background: #f1f1f1;
+}
+
+/* line 7, ../sass/inc/_base.scss */
+.container {
+  width: 500px;
+  margin: 25px auto;
+  transition: all 1.5s ease;
+  opacity: 0;
+}
+/* line 13, ../sass/inc/_base.scss */
+.container.show {
+  opacity: 1;
+}
+
+/* line 18, ../sass/inc/_base.scss */
+.choise {
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  float: left;
+}
+/* line 25, ../sass/inc/_base.scss */
+.choise li {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  border-bottom: 2px solid #e6e6e6;
+  transition: all 0.5s ease;
+}
+/* line 33, ../sass/inc/_base.scss */
+.choise li:hover {
+  background: #f2f6f9;
+  border-bottom: 2px solid #c1dbef;
+}
+/* line 37, ../sass/inc/_base.scss */
+.choise li:hover a {
+  color: #266ba1;
+}
+/* line 42, ../sass/inc/_base.scss */
+.choise li a {
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  color: #383838;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+
+/* line 53, ../sass/inc/_base.scss */
+.row {
+  background: #fff;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  border-bottom: 2px solid #e6e6e6;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+}
+/* line 63, ../sass/inc/_base.scss */
+.row.vraag {
+  background: #f4faf2;
+  border-bottom: 2px solid #46a72f;
+  color: #134307;
+}
+/* line 69, ../sass/inc/_base.scss */
+.row.option {
+  padding: 0px;
+  transition: all 0.5s ease;
+}
+/* line 73, ../sass/inc/_base.scss */
+.row.option:hover {
+  margin-left: 5px;
+}
+/* line 77, ../sass/inc/_base.scss */
+.row.option.active {
+  background: #f2f6f9;
+  border-bottom: 2px solid #c1dbef;
+  color: #266ba1;
+  margin-left: 10px;
+}
+/* line 84, ../sass/inc/_base.scss */
+.row.option label {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+}
+/* line 90, ../sass/inc/_base.scss */
+.row.option label input {
+  display: none;
+}
+/* line 96, ../sass/inc/_base.scss */
+.row p {
+  margin: 10px 0px 10px 0px;
+  line-height: 21px;
+}
+/* line 101, ../sass/inc/_base.scss */
+.row h1 {
+  margin: 0px;
+}
+
+/* line 106, ../sass/inc/_base.scss */
+button {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: #17a3f3;
+  border: 0px;
+  color: #032e47;
+  border-bottom: 2px solid #044367;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+/* line 119, ../sass/inc/_base.scss */
+button:focus {
+  outline: none;
+}
+/* line 122, ../sass/inc/_base.scss */
+button.open {
+  opacity: 1;
+}

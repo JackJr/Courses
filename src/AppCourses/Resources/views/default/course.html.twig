@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+    
+    {% if quest == false %}
+
+    <div class="row">
+       <h1>Cursus uitslag</h1>
+       <p>U heeft {{curPoints}} punten gehaalt</p>
+    </div>
+    
+    {% else %}
+
+        <div class="row">
+           <h1>{{course_name}}</h1>
+           <p>{{course_des}}</p>
+        </div>
+
+        <div class="row vraag">
+            {{quest}}
+        </div>
+     
+        {{ form_start(form) }}
+            {% for option in options %}        
+                <div class="row option">
+                    <label><input type="radio" name="qu_points" value="{{ option.points + curPoints }}">{{ option.answer }}</label>
+                </div>
+            {% endfor %}
+            {{ form_row(form.save, {'attr': {'class': 'submit'}}) }}
+        {{ form_end(form) }}
+  
+    {% endif %}
+
+</div>
+
+{% endblock %}

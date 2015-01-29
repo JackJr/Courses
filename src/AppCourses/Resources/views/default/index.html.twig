@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <h1>Kies cursus</h1>
+        <p>Klik op een cursus die je wilt starten</p>
+    </div>
+
+    <ul class="choise">
+         {% for course in courses %}
+            <li class="goTo" data-to="{{course.id}}" data-type="course"><a href="#">{{ course.name }}</a></li>
+         {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
